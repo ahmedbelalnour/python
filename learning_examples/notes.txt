@@ -1,0 +1,181 @@
+https://learntocodewith.me/programming/python/python-2-vs-python-3/
+There are two major Python versions, Python 2 and Python 3. Python 2 and 3 are quite different.
+It's different enough that the same script won't be able to run on both versions at the same time, but pick one and you'll be fine.”
+Essentially, the print statement has been replaced with a print () function
+The most important change is the print. On Py2, is print "hello" and in Py3 is print("Hello").
+3rd party libraries is one of Python 2's greatest strengths.
+Important: Python 2 Has Libraries: some libraries (like PyImage), only work on python 2.* versions.
+Wiki.python.org goes into depth on the differences between Python 2.7 and 3.3, saying that there are benefits to each. 
+It really depends on what your are trying to achieve. 
+But, in summation: “Python 2.x is legacy, Python 3.x is the present and future of the language.”
+
++-------------+
+|Tools		  |
++-------------+
+1. python interpreter from: https://www.python.org/
+2. download IDE like: http://jupyter.org/
+or
+dowload IDE with interpreter like: https://www.anaconda.com/download/
+
++-------------+
+|Hello, World!|
++-------------+
+"print" directive - it simply prints out a line (and also includes a newline, unlike in C).
+to print without new line: print(printValue, end="")
+comments:
+# for single line comment
+python does not have a multiline string (Block) comment, you can use """ or ''' 
+"""
+any code
+any code
+"""
+Python doesn't support ++, but you can do: number +=1
+https://stackoverflow.com/questions/2632677/python-integer-incrementing-with
+Python uses indentation for blocks, instead of curly braces. 
+Ex.
+#!/usr/bin/python3
+print("This line will be printed.")
+x = 10
+if(10 == x):
+    	# indented four spaces
+	print(x)
+escape characters: \t \n \b \r, to ignore \ inside "" and print the sring as it is, insert r before "" like:  
+rawStr = r"\this is a \raw str"
+
++-------------------+
+|Variables and Types|
++-------------------+
+Python is completely object oriented, and not "statically typed". 
+You do not need to declare variables before using them, or declare their type. Every variable in Python is an object.
+You can store any mixed types in list, tuple, set, and dictionary
+
+Numbers: int(), float(), long(), complex(re,im)
+myInt = 7
+print(myInt)
+myFloat = 7.0	or myFloat = float(7)
+print(myFloat)
+
+Strings: Strings are defined either with a single quote or a double quotes
+myString = 'Hello'
+print(myString)
+myString = "World"
+print(myString)
+The difference between the two is that using double quotes makes it easy to include apostrophes 
+(whereas these would terminate the string if using single quotes)
+mystring = "Don't worry about apostrophes"
+print(mystring)
+You can use + and * operators with strings:
+print("0"+ 3*"1"+ "240"+ 2*"7"+ "50")
+
+https://stackoverflow.com/questions/12018992/print-combining-strings-and-numbers
+Printing combining string and numbers:
+Mixing operators between numbers and strings is not supported:
+#This will not work!
+one = 1
+two = 2
+hello = "hello"
+print(one + two + hello)
+
+myID = int(7.5)
+mySalary = float(20)
+#Assignments can be done on more than one variable "simultaneously" on the same line like this
+myComplex, myName = complex(5, 10), "Ahmed"
+1a. print("My name is", myName, "My ID is" , myID, "My salary is", mySalary, "my complex is", myComplex)
+1b. print("My name is "+ str(myName)+ " My ID is "+ str(myID)+ " My salary is "+ str(mySalary)+ " my complex is "+ str(myComplex))
+1c. print("My name is %s My ID is %d My salary is %f my complex is " %(myName, myID, mySalary)) 
+1d. print("My name is {} My ID is {} My salary is {} my complex is {}".format(myName, myID, mySalary, myComplex))
+#use \ to continue statement on one than one line
+1e. print("My name is {nm} My ID is {id} My salary is {slr} my complex is {cm}"\
+.format(slr=mySalary, id=myID, nm=myName, cm=myComplex)) 
+
+List vs Tuple vs Dictionary vs set
+https://www.datacamp.com/community/tutorials/18-most-common-python-list-questions-learn-python
+
++----+
+|List|
++----+
+Lists are very similar to arrays. They can contain any type of variable, and they can contain as many variables as you wish. 
+Lists can also be iterated over in a very simple manner.
+Check list example
+
++----------+
+|Dictionary|
++----------+
+A dictionary is a data type similar to arrays, but works with keys and values instead of indexes. 
+Each value stored in a dictionary can be accessed using a key, which is any type of object (a string, a number, a list, etc.) instead of using its index to address it. you can think of dictionary as linked list.
+
+For example, a database of phone numbers could be stored using a dictionary like this:
+phonebook = {}
+phonebook["John"] = 938477566
+phonebook["Jack"] = 938377264
+phonebook["Jill"] = 947662781
+print(phonebook)
+
+Alternatively, a dictionary can be initialized with the same values in the following notation:
+
+phonebook = {
+    "John" : 938477566,
+    "Jack" : 938377264,
+    "Jill" : 947662781
+}
+print(phonebook)
+Note that keys does not process elements in any particular order. To process keys in alphabetical order, use sorted
+
++--------+
+|Function|
++--------+
+What are Functions?
+Functions are a convenient way to divide your code into useful blocks, allowing us to order our code, make it more readable, reuse it and save some time. Also functions are a key way to define interfaces so programmers can share their code.
+
+To create a function, use def statement. The statements in the function definition must be indented.
+You must define a function before you use it.
+
+use global varible inside the function
+https://stackoverflow.com/questions/423379/using-global-variables-in-a-function-other-than-the-one-that-created-them
+
+globvar = 0
+
+def set_globvar_to_one():
+    global globvar    # Needed to modify global copy of globvar
+    globvar = 1
+
+def try_to_set_globvar_to_one():
+    globvar = 1
+
+def print_globvar():
+    print(globvar)     # No need for global declaration to read value of globvar
+
+try_to_set_globvar_to_one()
+print_globvar()       # Prints 0
+
+set_globvar_to_one()
+print_globvar()       # Prints 1
+
++--------+
+|Modules |
++--------+
+Modules in Python are simply Python files with the .py extension, which implement a set of functions. 
+Modules are imported from other modules using the import command.
+
+import MyArithmatic
+print(MyArithmatic.addTwoNumbers(5,6))
+
+from MyArithmatic import *
+print(addTwoNumbers(5,6))
+
++---------------------+
+|Working With Strings |
++---------------------+
+1. String Indexing and Slices
+2. String Capitalization Functions
+3. Editing Functions
+
+
+
+
+
+
+
+
+
+
