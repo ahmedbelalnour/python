@@ -10,14 +10,6 @@ It really depends on what your are trying to achieve.
 But, in summation: “Python 2.x is legacy, Python 3.x is the present and future of the language.”
 
 +-------------+
-|Tools		  |
-+-------------+
-1. python interpreter from: https://www.python.org/
-2. download IDE like: http://jupyter.org/
-or
-dowload IDE with interpreter like: https://www.anaconda.com/download/
-
-+-------------+
 |Hello, World!|
 +-------------+
 "print" directive - it simply prints out a line (and also includes a newline, unlike in C).

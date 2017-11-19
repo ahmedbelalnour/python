@@ -1,0 +1,47 @@
++-------------+
+|Tools		  |
++-------------+
+1. python interpreter from: https://www.python.org/
+2. download IDE like: http://jupyter.org/
+or
+dowload complete python distribution called Anaconda contains: https://www.anaconda.com/download/
+1. Python interpreter
+2. Jupyter IDE: web application based on server-client structure
+	a. new python notebook means new python file, notebook contains cells each cell contains one ore more python line of code
+	b. "Enter" to insert new line in the same cell, "Shift+Enter" to execure current cell and move to next cell, 
+	"Alt+Enter" execute current cell and inset new cell, you can insert cell before or after or delete the cell 
+	c. The numbers "In[num]" describe the order of execution
+	d. cell type: code, markdown "comment"
+	e. kernel >> restart, to restart python engine
+	f. to save file on your machine at any path, file >> download
+
+3. spyder IDE: integrated essentials libraries for data science, such as NumPy, SciPy, Matplotlib and IPython, will use it in Machine learning
+4. set of libraries like: 
+
++-------------+
+|anaconda 	  |
++-------------+
+https://www.youtube.com/watch?v=JP60kTsVJ8E
+1. Download anaconda for Linux "anaconda.sh"
+2. Add the execution permision for the file by run: $ chmod +x anaconda.sh
+3. Install: $ ./anaconda.sh
+4. after installation, 
+	run anaconda navigator: $ anaconda-navigator
+	run jupiter: 			$ ipython notebook or jupyter-notebook
+	run spyder:				$ spyder
+
+other tools
+5. sudo apt-get install python-pip
+	http://www.pythonforbeginners.com/basics/how-to-use-pip-and-pypi
+6. some libraries
+	sudo apt-get install python3-matplotlib 
+	conda install -c menpo opencv3			#https://anaconda.org/menpo/opencv3
+	conda install -c conda-forge moviepy	#https://anaconda.org/conda-forge/moviepy
++-------------+
+|pycharm 	  |
++-------------+
+1. download pycharm for Linux "pycharm-community-2017.2.3.tar.gz"
+2. unzip the compressed file: $ tar xvf pycharm-community-2017.2.3.tar.gz
+3. go to the installation directory: cd cd pycharm-community-2017.2.3/bin
+4. Add the execution permision for the file by run: $ chmod +x pycharm.sh
+5. run: ./pycharm.sh
